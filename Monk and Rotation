@@ -1,3 +1,4 @@
+
 def rightRotatebyk(arr, n,k):
     for k in range(k):
         firstelement = arr[n-1]
@@ -12,9 +13,9 @@ def solve(s):
     array = input().split()
     map_object = map(int, array)
     arr = list(map_object)
-    rightRotatebyk(arr,n,k)
-    for item in arr:
-        print(item,end=" ")
+    #rightRotatebyk(arr,n,k)
+    for index in range(n):
+        print(arr[ (index + n - k ) % n],end=" ")
     print()
 
     
@@ -22,3 +23,4 @@ def solve(s):
 testcases = int(input())
 for i in range(testcases):
     solve(i)
+
