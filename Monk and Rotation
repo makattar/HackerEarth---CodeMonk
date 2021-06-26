@@ -1,0 +1,24 @@
+def rightRotatebyk(arr, n,k):
+    for k in range(k):
+        firstelement = arr[n-1]
+        for i in range(n-1,0,-1):
+            arr[i] = arr[i-1]
+        arr[0] = firstelement
+
+def solve(s):
+    kn = input().split()
+    n = int(kn[0])
+    k = int(kn[1]) % n
+    array = input().split()
+    map_object = map(int, array)
+    arr = list(map_object)
+    rightRotatebyk(arr,n,k)
+    for item in arr:
+        print(item,end=" ")
+    print()
+
+    
+
+testcases = int(input())
+for i in range(testcases):
+    solve(i)
